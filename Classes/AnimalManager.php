@@ -31,6 +31,28 @@ class AnimalManager {
     $animal->hydrate([
       'id' => $this->db->lastInsertId()
     ]);
+
   }
+
+  public function getList(Zoo $zoo)
+    {
+        $animals = [];
+
+        $q = $this->db->prepare('SELECT Animal.* FROM `Animal` JOIN Enclos ON animal.id_enclos = Enclos.id JOIN Zoo ON Enclos.id_zoo = Zoo.id WHERE Zoo.id = ?');
+
+        $q->execute([intval($zoo->getId())]);
+
+        while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
+        {
+            switch ($donnees['type'])
+            {
+                case 'Eagle': $animal[] = new Eagle($donnees); break;
+                case 'Fish': $animals[] = new Fish($donnees); break;
+                case 'Tiger': $animals[] = new Tiger($donnees); break;
+            }
+            echo '<br>';
+        }
+    return $animals;
+    }
 
 }

@@ -32,4 +32,6 @@ class EnclosureManager {
         'id' => $this->db->lastInsertId()
       ]);
     }
+
+
 }

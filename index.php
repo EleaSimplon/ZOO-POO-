@@ -11,6 +11,51 @@
 
 <!-- ***** BODY *****  -->
 
+<h1>Welcome to ZooLand</h1>
+
+    <content>
+        <form>
+            <h1>Welcome to ZooLand</h1>
+            <div class="row1">
+                <div class="col">
+                    <input type="text" name="name" placeholder="Name">
+                </div>
+                <div class="col">
+                    <input type="text" name="type" placeholder="Type">
+                </div>
+            </div>
+            <div class="row1">
+                <div class="col">
+                    <input type="number" name="age" placeholder="Age">
+                </div>
+                <div class="col">
+                    <input type="text" name="sex" placeholder="Sex">
+                    
+                </div>
+            </div>
+            <div class="row2">
+                <div class="col">
+                    <input type="text" name="species" placeholder="Species">
+                </div>
+                <div class="col">
+                    <input type="number" name="gesta" placeholder="Gestation">
+                </div>
+            </div>
+            <div class="row2">
+                <div class="col">
+                    <input type="number" name="size" placeholder="Size">
+                </div>
+                <div class="col">
+                    <input type="number" name="weight" placeholder="Weight">
+                </div>
+            </div>
+            <div class="row5">
+                <input type="submit" class="submitbtn">
+            </div>
+        </form>
+    </content>
+   
+
 <?php
 
    $birdcage = new BirdCage([

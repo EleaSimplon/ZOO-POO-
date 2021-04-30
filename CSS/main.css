@@ -1,3 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 body {
     background-color: #cfe1b9;
+    font-family: 'Luckiest Guy', cursive;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+content {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(251, 251, 251);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    height: 500px;
+    border-radius: 8px;
+}
+
+content h1 {
+    margin-bottom: 0;
+}
+
+content p {
+    margin-top: 0;
+}
+
+content header {
+    text-align: center;
+    color: rgb(22, 22, 31);
+    cursor: pointer;
+}
+
+form input {
+    border: none;
+    background-color: #d9dbda;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.row1, .row2, .row3, .row4, .row5 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.row1 .col input {
+    font-size: 20px;
+    padding: 10px;
+    margin: 8px;
+    color: rgb(22, 22, 31);
+    transition: 0.8s;
+}
+
+.row2 .col input {
+    font-size: 20px;
+    padding: 10px;
+    margin: 8px;
+    color: rgb(22, 22, 31);
+    transition: 0.8s;
+}
+
+textarea {
+    font-size: 20px;
+    padding: 10px;
+    margin: 8px;
+    width: 100%;
+    background-color: #d9dbda;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.8s;
+}
+
+.row4 {
+    display: flex;
+    justify-content: center;
+}
+
+.row4 p {
+    color: rgb(22, 22, 31);
+    margin: 8px;
+    cursor: pointer;
+}
+
+.row5 {
+    display: flex;
+    justify-content: center;
+}
+
+.row5 input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    border: none;
+    padding: 10px 40px 10px 40px;
+    border-radius: 4px;
+    margin: 8px;
+    transition: 1s;
+}
+
+.row5 input:hover {
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: rgb(22, 22, 31);
+}
+
+.row1 .col input:hover {
+    background-color: rgb(22, 22, 31);
+    color: whitesmoke;
+}
+
+.row2 .col input:hover {
+    background-color: rgb(22, 22, 31);
+    color: whitesmoke;
+}
+
+textarea:hover {
+    background-color: rgb(22, 22, 31);
+    color: whitesmoke;
 }
