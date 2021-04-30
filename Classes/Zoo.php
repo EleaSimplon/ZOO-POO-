@@ -7,10 +7,8 @@ class Zoo {
     protected int $nbMaxEnclos = 25;
     protected array $allEnclos = [];
 
-    function __construct($name, $worker, $nbMaxEnclos = 25){
-        $this->name = $name;
-        $this->worker = $worker;
-        $this->nbMaxEnclos = $nbMaxEnclos;
+    public function __construct(array $donnees){
+        $this->hydrate($donnees);
     }
 
     /* HYDRATE */

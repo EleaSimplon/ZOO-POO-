@@ -10,20 +10,40 @@ abstract class Enclosure {
     // protected array $animalsEnclos = [];
     protected $id;
     protected int $height;
-    protected bool $summit = false;
+    protected bool $summit;
     protected int $deep;
     protected int $salinity;
+    protected int $idZoo;
+    protected  $animalEnclos;
 
     /* CONSTRUCT */
 
-    public function __construct($type, $surface, $max) {
-        $this->type = $type;
-        $this->surface = $surface;
-        $this->max = $max;
+    public function __construct(array $donnees){
+        $this->hydrate($donnees);
     }
 
     public function getId() {
         return $this->id;
+    }
+
+    public function setId ($id){
+        $this->id = $id;
+    }
+
+    public function getIdZoo (){
+        return $this->idZoo;
+    }
+
+    public function setIdZoo ($idZoo){
+        $this->idZoo = $idZoo;
+    }
+
+    public function getAnimalEnclos (){
+        return $this->animalEnclos;
+    }
+
+    public function setAnimalEnclos ($animalEnclos){
+        $this->animalEnclos = $animalEnclos;
     }
 
     /* HYDRATE */
