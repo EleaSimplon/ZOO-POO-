@@ -12,14 +12,6 @@ class Worker {
         $this->hydrate($donnees);
     }
 
-    public function getIdZoo (){
-        return $this->idZoo;
-    }
-
-    public function setIdZoo ($idZoo){
-        $this->idZoo = $idZoo;
-    }
-
     /* HYDRATE */
 
     public function hydrate($donnees){

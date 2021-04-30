@@ -13,20 +13,65 @@
 
 <?php
 
-    // $zoo = new Zoo('Zooland', 'Jean', 25);
-    // $test = new BirdCage('BirdCage', 50, 100, 200);
-    // $test->setAnimalsEnclos([
-    //     new Eagle('Eagle', 'male', 3, 15, 20),
-    //     new Eagle('Eagle', 'female', 6, 15, 20),
-    //     new Eagle('Eagle', 'female', 7, 15, 20),
-    //     new Eagle('Eagle', 'male', 3, 15, 20),
-    // ]);
+   $birdcage = new BirdCage([
+        'type' => "birdcage",
+        'surface' => 20,
+        'max' => 6,
+        'summit' => true,
+        'height' => 50,
+        'id_zoo' => 1,
+   ]);
 
-    // // $test->animalsFeatures();
+   $aqua = new Aqua([
+        'type' => "aqua",
+        'surface' => 20,
+        'max' => 6,
+        'salinity' => 10,
+        'deep' => 50,
+        'id_zoo' => 1,
+    ]);
 
-    // $worker = new Worker('Jean', 'male', 28);
-    // $worker->inspectEnclos($test);
+    $fish = new Fish([
+        'nameSpecies' => "Truite",
+        'sex' => 'female',
+        'age' => 6,
+        'weight' => 10,
+        'size' => 50,
+    ]);
 
+    $eagle = new Eagle([
+        'nameSpecies' => "Faucon",
+        'sex' => 'male',
+        'age' => 7,
+        'weight' => 20,
+        'size' => 120,
+    ]);
+
+    $worker = new Worker([
+        'name' => "Prune",
+        'sex' => 'woman',
+        'age' => 36,
+    ]);
+
+    $zoo = new Zoo([
+        'name' => "ZooLand",
+        'worker' => $worker,
+
+    ]);
+
+    echo '<br>';
+
+    $zooManager = new ZooManager($pdo);
+    $workerManager = new WorkerManager($pdo);
+    $enclosManager = new EnclosureManager($pdo);
+    $animalManager = new AnimalManager($pdo);
+
+    $zooManager->add($zoo);
+    $workerManager->add($worker, $zoo);
+    $enclosManager->add($birdcage, $zoo);
+    $enclosManager->add($aqua, $zoo);
+    $animalManager->add($fish, $aqua);
+    $animalManager->add($eagle, $birdcage);
 ?>
 
 

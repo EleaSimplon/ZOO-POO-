@@ -6,6 +6,7 @@ class Zoo {
     protected object $worker;
     protected int $nbMaxEnclos = 25;
     protected array $allEnclos = [];
+    protected $id;
 
     public function __construct(array $donnees){
         $this->hydrate($donnees);
@@ -68,6 +69,12 @@ class Zoo {
         return $this->allEnclos;
     }
 
+    public function getId(){
+        return $this->id;
+    }
 
+    public function setId($id){
+        $this->id = $id;
+    }
 
 }

@@ -3,7 +3,9 @@
 abstract class Animal {
 
     protected string $nameSpecies;
+    protected string $type;
     protected string $sex;
+    protected int $idEnclos;
     protected int $age;
     protected int $weight;
     protected int $size;
@@ -12,8 +14,7 @@ abstract class Animal {
     protected bool $sick = false;
     protected int $gestation = 0;
     protected $id;
-    protected $idEnclos;
-
+   
 
 
     /* CONSTRUCT */
@@ -62,6 +63,14 @@ abstract class Animal {
 
     public function setNameSpecies ($nameSpecies){
         $this->nameSpecies = $nameSpecies;
+    }
+
+    public function getType (){
+        return $this->type;
+    }
+
+    public function setType ($type){
+        $this->type = $type;
     }
 
     public function getSex (){

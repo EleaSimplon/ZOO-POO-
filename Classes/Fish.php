@@ -2,15 +2,8 @@
 
 class Fish extends Animal {
 
-    protected int $gestation = 0;
+    protected string $type = 'Fish';
 
-    public function getGestation (){
-        return $this->gestation;
-    }
-
-    public function setGestation ($gestation){
-        $this->gestation = $gestation;
-    }
 
     public function lay() {
         if ($this->gestation === 100 && $this->sex == 'female' ){

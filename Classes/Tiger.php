@@ -2,15 +2,7 @@
 
 class Tiger extends Animal {
     
-    protected int $gestation = 0;
-
-    public function getGestation (){
-        return $this->gestation;
-    }
-
-    public function setGestation ($gestation){
-        $this->gestation = $gestation;
-    }
+   protected string $type = 'Tiger';
 
     public function birth() {
         if ($this->gestation === 100 && $this->sex == 'female' ){
